@@ -9,7 +9,7 @@ import {
 } from "./study.controller.js";
 // import habitRouter from "../habits/index.js";
 import reactionRouter from "../reactions/index.js";
-// import pointRouter from "../points/index.js";
+import pointRouter from "../points/index.js";
 
 const router = express.Router();
 
@@ -22,6 +22,6 @@ router.post("/", addStudy);
 
 // router.use("/:studyId/habits", habitRouter);
 router.use("/:studyId/reactions", reactionRouter);
-// router.use("/:studyId/points", pointRouter);
+router.use("/:studyId/points", pointRouter);
 
 export default router;
